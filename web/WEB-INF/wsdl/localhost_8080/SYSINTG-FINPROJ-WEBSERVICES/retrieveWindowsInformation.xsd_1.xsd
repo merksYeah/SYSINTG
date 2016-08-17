@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://callwindowsservice.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://callwindowsservice.org/">
+
+<xs:element name="IOException" type="tns:IOException"/>
+
+<xs:element name="InterruptedException" type="tns:InterruptedException"/>
+
+<xs:element name="backupDatabase" type="tns:backupDatabase"/>
+
+<xs:element name="backupDatabaseResponse" type="tns:backupDatabaseResponse"/>
+
+<xs:element name="createDirectory" type="tns:createDirectory"/>
+
+<xs:element name="createDirectoryResponse" type="tns:createDirectoryResponse"/>
+
+<xs:element name="getWebServiceStatus" type="tns:getWebServiceStatus"/>
+
+<xs:element name="getWebServiceStatusResponse" type="tns:getWebServiceStatusResponse"/>
+
+<xs:element name="retrieveCPUUsage" type="tns:retrieveCPUUsage"/>
+
+<xs:element name="retrieveCPUUsageResponse" type="tns:retrieveCPUUsageResponse"/>
+
+<xs:element name="retrieveDatabases" type="tns:retrieveDatabases"/>
+
+<xs:element name="retrieveDatabasesResponse" type="tns:retrieveDatabasesResponse"/>
+
+<xs:element name="retrieveFreeDiskSpace" type="tns:retrieveFreeDiskSpace"/>
+
+<xs:element name="retrieveFreeDiskSpaceResponse" type="tns:retrieveFreeDiskSpaceResponse"/>
+
+<xs:element name="retrieveMemoryUsage" type="tns:retrieveMemoryUsage"/>
+
+<xs:element name="retrieveMemoryUsageResponse" type="tns:retrieveMemoryUsageResponse"/>
+
+<xs:element name="retrieveNumberofCores" type="tns:retrieveNumberofCores"/>
+
+<xs:element name="retrieveNumberofCoresResponse" type="tns:retrieveNumberofCoresResponse"/>
+
+<xs:element name="retrieveRunningProcesses" type="tns:retrieveRunningProcesses"/>
+
+<xs:element name="retrieveRunningProcessesResponse" type="tns:retrieveRunningProcessesResponse"/>
+
+<xs:element name="startWebService" type="tns:startWebService"/>
+
+<xs:element name="startWebServiceResponse" type="tns:startWebServiceResponse"/>
+
+<xs:element name="stopWebService" type="tns:stopWebService"/>
+
+<xs:element name="stopWebServiceResponse" type="tns:stopWebServiceResponse"/>
+
+<xs:element name="testPath" type="tns:testPath"/>
+
+<xs:element name="testPathResponse" type="tns:testPathResponse"/>
+
+<xs:complexType name="retrieveNumberofCores">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="retrieveNumberofCoresResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createDirectory">
+<xs:sequence>
+<xs:element name="directorypath" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createDirectoryResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="stopWebService">
+<xs:sequence>
+<xs:element name="serviceName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="stopWebServiceResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveDatabases">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="retrieveDatabasesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="IOException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="backupDatabase">
+<xs:sequence>
+<xs:element name="databasename" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="backupDatabaseResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="InterruptedException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveMemoryUsage">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="retrieveMemoryUsageResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getWebServiceStatus">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getWebServiceStatusResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveCPUUsage">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="retrieveCPUUsageResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="startWebService">
+<xs:sequence>
+<xs:element name="serviceName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="startWebServiceResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="testPath">
+<xs:sequence>
+<xs:element name="directorypath" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="testPathResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveRunningProcesses">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="retrieveRunningProcessesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retrieveFreeDiskSpace">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="retrieveFreeDiskSpaceResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

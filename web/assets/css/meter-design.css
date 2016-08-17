@@ -1,0 +1,51 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 08 12, 16, 5:43:30 PM
+    Author     : migue
+*/
+
+meter {
+  width: 200px;
+  height: 25px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 5px
+  
+}
+
+meter::-webkit-meter-bar {
+  background: none; /* Required to get rid of the default background property */
+  background-color: whiteSmoke;
+  box-shadow: 0 5px 5px -5px #333 inset;
+  animation: animate-stripes 5s linear infinite;
+  background-image:
+    linear-gradient(
+      135deg,
+      transparent,
+      transparent 33%,
+      rgba(0, 0, 0, 0.1) 33%,
+      rgba(0, 0, 0, 0.1) 66%,
+      transparent 66%
+    );
+  background-size: 50px 25px;
+}
+
+@keyframes animate-stripes {
+  to { background-position: -50px 0; }
+}
+
+meter::-webkit-meter-optimum-value {
+  box-shadow: 0 5px 5px -5px #999 inset;
+  background-image: linear-gradient(
+    90deg,  
+    #00FFFF 5%,
+    #00FFFF 90%
+  );
+  background-size: 100% 100%;
+}
+
+
